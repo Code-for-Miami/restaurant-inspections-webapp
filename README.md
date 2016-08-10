@@ -4,6 +4,7 @@ This web app shows information about Miami-Dade County's restaurant inspections,
 
 #### Status
 The prototype is currently being built.
+We are discussing app design in issues and documenting in the [wiki](https://github.com/Code-for-Miami/restaurant-inspections-webapp/wiki)
 
 ## Why
 It can be hard to find out which local restaurants are currently closed due to failed inspections, or which ones are guaranteed to provide a safe, tasty meal. However, Miami-Dade County's Restaurant Inspection website can be hard to use. This web app seeks to provide a simple alternative that works on nearly any device.
