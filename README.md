@@ -10,12 +10,12 @@ We are discussing app design in issues and documenting in the [wiki](https://git
 The purpose of the app is show the data in a user friendly way via dashboard, tables and graphs in order to facilitate data inference over the dataset.
 
 ## Who
-- [Code for Miami](https://github.com/codeformiami) < [http://codefor.miami/projects](http://codefor.miami/projects) >
-- [Marcos Hernandez](https://github.com/marcoslhc) < [http://xiryvella.com](http://xiryvella.com) >
+- [Code for Miami](https://github.com/codeformiami) &lt;[http://codefor.miami/projects](http://codefor.miami/projects)&gt;
+- [Marcos Hernandez](https://github.com/marcoslhc) &lt;[http://xiryvella.com](http://xiryvella.com)&gt;
 
 If you contribute please add your name and contact information:
 
-`[Name](https://github.com/username) < [contact info](contact_url)] >`
+`[Name](https://github.com/username) <[contact info](contact_url)]>`
 
 Also you can add your name to the [package.json](https://github.com/Code-for-Miami/restaurant-inspections-webapp/blob/master/package.json)
 
@@ -38,6 +38,7 @@ TBD
 
 #### Testing
 Run `npm test` for one shot Testing
+
 Run `npm run dev` for run the test on file change (useful for TDD)
 
 ## Contribute
