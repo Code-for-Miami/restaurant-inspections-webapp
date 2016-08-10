@@ -55,7 +55,7 @@ Repeat this for every new feature
 ```sh
 git checkout develop                # 1. Branch from develop
 git branch cool-new-feature         # 2. Create a new branch for your feature
-git pull --rebase upstream/develop  # 3. Play your team's changes into your feature branch
+git pull --rebase upstream develop  # 3. Play your team's changes into your feature branch
 git push origin cool-new-feature    # 4. Push to your origin
 ```
 
