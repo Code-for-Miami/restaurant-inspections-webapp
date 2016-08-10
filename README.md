@@ -30,7 +30,32 @@ TBD
 TBD
 
 ## Contribute
-TBD
+We use the [Integration-Manager Workflow](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#Integration-Manager-Workflow)
+
+First fork this repository and clone your fork in your computer. Add this repo as a remote after you clone your fork into your local
+
+```sh
+git add remote upstream https://github.com/Code-for-Miami/restaurant-inspections-webapp/
+```
+
+Repeat this for every new feature
+
+```sh
+git checkout develop                # 1. Branch from develop
+git branch cool-new-feature         # 2. Create a new branch for your feature
+git pull --rebase upstream/develop  # 3. Play your team's changes into your feature branch
+git push origin cool-new-feature    # 4. Push to your origin
+```
+
+It is advisable to update your public branches often:
+
+```sh
+git checkout <branch>               # master or develop
+git pull --rebase upstream/<branch> # Use rebase to update your local
+git push origin <branch>            # Push your public fork
+```
+
+Make a PR from `cool-new-feature` in your fork against `develop` in https://github.com/Code-for-Miami/restaurant-inspections-webapp
 
 ## License
 [LICENSE](https://github.com/Code-for-Miami/restaurant-inspections-webapp/blob/master/LICENSE)
