@@ -37,6 +37,6 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-dist
-
 typings
+src/ts/**.js
+src/ts/**.js.map
