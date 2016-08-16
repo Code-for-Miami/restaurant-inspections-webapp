@@ -4,13 +4,13 @@ import { Headers, Http } from '@angular/http';
 
 @Injectable()
 export class CountiesService {
-    private url = 'http://127.0.0.1:8080/list-counties'
-    constructor(private http: Http) {}
-    getCounties() {
-        return this.http.get(this.url)
-            .map((response) => {
-                let res = response.json();
-                return res;
-            });
-    }
+  private url = 'http://198.199.73.168/fra/list-counties'
+  constructor(private http: Http) { }
+  getCounties() {
+    return this.http.get(this.url)
+      .map((response) => {
+        let res = response.json();
+        return res;
+      });
+  }
 }
