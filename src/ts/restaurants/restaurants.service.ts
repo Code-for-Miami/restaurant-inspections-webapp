@@ -3,7 +3,7 @@ import { Restaurant } from './restaurant.model';
 import { Headers, Http } from '@angular/http';
 
 @Injectable()
-export class RestaurantService {
+export class RestaurantsService {
   private url = 'http://198.199.73.168/fra/county';
   constructor(private http: Http) { }
   getRestaurants(countyId) {
