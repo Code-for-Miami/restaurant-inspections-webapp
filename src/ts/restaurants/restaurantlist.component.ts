@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Restaurant } from './restaurant.model';
 import { RestaurantsService } from './restaurants.service';
+import { ActivatedRoute, Params } from '@angular/router';
+
+
 
 @Component({
     selector: 'restaurant-list',
@@ -18,8 +21,16 @@ import { RestaurantsService } from './restaurants.service';
 })
 export class RestaurantListComponent implements OnInit {
     restaurants: Restaurant[] = [];
-    constructor(private RestaurantsService:RestaurantsService) {}
+    countyId: Number = 0;
+    constructor(private restaurantsService:RestaurantsService,
+                private route: ActivatedRoute) {}
     ngOnInit() {
+      this.route.params.forEach((params: Params) => {
+        console.log(params);
+        let id = +params['county_id'];
+        this.restaurantsService.getRestaurants(id)
+          .subscribe(restaurants => this.restaurants = restaurants);
+      });
 
     }
 }

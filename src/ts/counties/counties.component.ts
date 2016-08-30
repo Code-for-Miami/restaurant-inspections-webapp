@@ -12,7 +12,7 @@ import { ActivatedRoute, Params } from '@angular/router';
             <tr *ngFor="let county of counties" (click)=selectCounty(county)><td>{{ county.district }}</td><td>{{ county.countynumber }}</td><td>{{ county.countyname }}</td><td>{{ county.inspections }}</td>
         </table>
     `,
-  styleUrls: ['src/css/counties.component.css'],
+  styleUrls: ['dist/counties.component.css'],
   providers: [CountiesService]
 })
 export class CountiesComponent implements OnInit {
