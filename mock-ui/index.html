@@ -3,44 +3,117 @@
     <head>
         <meta charset="utf-8">
         <title>Mock UI</title>
+        <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous" charset="utf-8"></script>
     </head>
     <body>
       <div class="container">
-        <section class="header">Florida Restaurant inspections database</section>
+        <section class="header">
+          <div class="header__title">Florida Restaurant inspections database</div></section>
         <section class="body">
-          <div class="form">
-            <form action="">
-              <select class="" name="">
-                <option></option>
-              </select>
-              <input type="text" name="name" value="">
-              <select class="" name="">
-                <option></option>
-              </select>
-              <select class="" name="">
-                <option></option>
-              </select>
-            </form>
+          <div class="body__form">
+            <div class="form" action="">
+              <div class="body__form__dropdown dropdown">
+                <div class="dropdown-container">
+                  <p class="dropdown-description">Select County</p>
+                  <p class="dropdown-button">click here</p>
+                  <ul class="body__form__select dropdown-menu dropdown-select" name="">
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                  </ul>
+                </div>
+              </div>
+              <input class="body__form__input--text" type="text" name="name" placeholder="Restaurant Name" value="">
+              <div class="body__form__dropdown dropdown">
+                <div class="dropdown-container">
+                  <div class="dropdown-description">From this day</div>
+                  <div class="dropdown-button">click here</div>
+                  <ul class="body__form__select dropdown-menu dropdown-select" name="">
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="body__form__dropdown dropdown">
+                <div class="dropdown-container">
+                  <div class="dropdown-description">To this day</div>
+                  <div class="dropdown-button">click here</div>
+                  <ul class="body__form__select dropdown-menu dropdown-select" name="">
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="results">
-            <table>
-              <tr>
-                <th>Business Name</th>
-                <th>Business Address</th>
-                <th># of Inspections</th>
-                <th># of violations</th>
-                <th>Rank</th>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+            <table class="tables">
+              <thead>
+                <tr>
+                  <th>Business Name</th>
+                  <th>Business Address</th>
+                  <th># of Inspections</th>
+                  <th># of violations</th>
+                  <th>Rank</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </section>
         <section class="footer"></section>
       </div>
+      <script>
+      (function (global) {
+        function App() {
+          return this;
+        }
+
+        App.prototype.init = function () {
+          console.log($('body'));
+        }
+
+        App.prototype.build_dropdown = function () {
+          $(".dropdown-button").click(function() {
+            var $button, $menu;
+            $button = $(this);
+            $menu = $button.siblings(".dropdown-menu");
+            $menu.toggleClass("show-menu");
+            $menu.children("li").click(function() {
+              $menu.removeClass("show-menu");
+              $button.html($(this).html());
+            });
+          });
+        }
+
+        let doc = global.document;
+        let body = doc.body;
+
+        document.addEventListener('DOMContentLoaded', function () {
+          let app = new App();
+          app.init();
+          app.build_dropdown();
+        });
+      })(window);
+
+      </script>
     </body>
 </html>
